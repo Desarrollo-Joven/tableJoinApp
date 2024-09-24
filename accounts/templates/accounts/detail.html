@@ -1,0 +1,24 @@
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Account</title>
+  </head>
+
+  <body>
+    <p>
+      <strong>Name:</strong>
+      {{user.username}}
+    </p>
+    {% for book in user.books.all %}
+    {% for variation in book.variations.all %}
+    <p>
+      {{ variation.kind}}
+    </p>
+    {% endfor %}
+    {% endfor %}
+
+    <a href="{% url 'accounts:index' %}">Back</a>
+  </body>
+
+</html>

@@ -1,0 +1,19 @@
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Account</title>
+  </head>
+
+  <body>
+    <h2>Sign up</h2>
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" value="Create User">
+    </form>
+  </body>
+
+  <a href="{% url 'accounts:index' %}">Back</a>
+
+</html>
